@@ -3,8 +3,6 @@ export type ExhibitProps = {
     title: string;
     beginDate: string;
     endDate: string;
-    description: string | null;
     url: string;
     primaryimageurl: string;
-    posterUrl: string;
 };

@@ -7,11 +7,11 @@ export default async function getAllPosts(): Promise<ExhibitProps[]> {
     const response = await fetch(API_URL);
     const data = await response.json();
 
-    return data.records.map((p) => ({
+    return data.records.map((p: ExhibitProps): ExhibitProps => ({
         exhibitionid: p.exhibitionid,
         title: p.title,
-        beginDate: p.begindate,
-        endDate: p.enddate,
+        beginDate: p.beginDate,
+        endDate: p.endDate,
         url: p.url,
         primaryimageurl: p.primaryimageurl,
     }));
